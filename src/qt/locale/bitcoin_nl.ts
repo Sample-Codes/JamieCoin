@@ -1107,7 +1107,7 @@ Adres: %4
     <message>
         <location filename="../qrcodedialog.cpp" line="63"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Resulterende URI te lang, probeer de tekst korter te maken voor het label/bericht.</translation>
+        <translation>Resulterende URI te lang, projamie de tekst korter te maken voor het label/bericht.</translation>
     </message>
     <message>
         <location filename="../qrcodedialog.cpp" line="120"/>
@@ -1917,12 +1917,12 @@ Adres: %4
     <message>
         <location filename="../verifymessagedialog.cpp" line="55"/>
         <source>The signature could not be decoded. Please check the signature and try again.</source>
-        <translation>De handtekening kon niet gedecodeerd worden. Controleer svp de handtekening en probeer het opnieuw.</translation>
+        <translation>De handtekening kon niet gedecodeerd worden. Controleer svp de handtekening en projamie het opnieuw.</translation>
     </message>
     <message>
         <location filename="../verifymessagedialog.cpp" line="62"/>
         <source>The signature did not match the message digest. Please check the signature and try again.</source>
-        <translation>De handtekening correspondeerde niet met het bericht. Controleer svp de handtekening en probeer het opnieuw.</translation>
+        <translation>De handtekening correspondeerde niet met het bericht. Controleer svp de handtekening en projamie het opnieuw.</translation>
     </message>
     <message>
         <location filename="../verifymessagedialog.cpp" line="72"/>
@@ -2087,7 +2087,7 @@ Adres: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="70"/>
         <source>Try to discover public IP address (default: 1)</source>
-        <translation>Probeer om publieke IP-adres te achterhalen (standaard: 1)</translation>
+        <translation>Projamie om publieke IP-adres te achterhalen (standaard: 1)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="73"/>
@@ -2422,7 +2422,7 @@ SSL-opties: (zie de Bitcoin wiki voor SSL-instructies)</translation>
     <message>
         <location filename="../bitcoinstrings.cpp" line="65"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>Voeg een knooppunt om te verbinden toe en probeer de verbinding open te houden</translation>
+        <translation>Voeg een knooppunt om te verbinden toe en projamie de verbinding open te houden</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="28"/>

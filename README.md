@@ -1,5 +1,5 @@
-BeerCoin
-BeerCoin is a decendent of Litecoin that combines the great features from Luckycoin (random blocks) and Florincoin (transaction message). Like Litecoin it uses scrypt as a proof of work scheme.
+JamieCoin
+JamieCoin is a decendent of Litecoin that combines the great features from Luckycoin (random blocks) and Florincoin (transaction message). Like Litecoin it uses scrypt as a proof of work scheme.
 
 - 20 seconds block time
 - Difficulty retargets every 60 blocks, with accelerated diff retarget at the beginning to prevent instamining 

@@ -149,7 +149,7 @@ const char* GetOpName(opcodetype opcode)
     case OP_DUP                    : return "OP_DUP";
     case OP_NIP                    : return "OP_NIP";
     case OP_OVER                   : return "OP_OVER";
-    case OP_BEERK                   : return "OP_BEERK";
+    case OP_JAMK                   : return "OP_JAMK";
     case OP_ROLL                   : return "OP_ROLL";
     case OP_ROT                    : return "OP_ROT";
     case OP_SWAP                   : return "OP_SWAP";
@@ -531,7 +531,7 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, co
                 }
                 break;
 
-                case OP_BEERK:
+                case OP_JAMK:
                 case OP_ROLL:
                 {
                     // (xn ... x2 x1 x0 n - xn ... x2 x1 x0 xn)

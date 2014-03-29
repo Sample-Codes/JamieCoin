@@ -984,40 +984,40 @@ DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
 
 DOCSET_PUBLISHER_NAME  = Publisher
 
-# If the GENERATE_HTMLHBEER tag is set to YES, additional index files 
+# If the GENERATE_HTMLHJAM tag is set to YES, additional index files 
 # will be generated that can be used as input for tools like the 
 # Microsoft HTML help workshop to generate a compiled HTML help file (.chm) 
 # of the generated HTML documentation.
 
-GENERATE_HTMLHBEER      = NO
+GENERATE_HTMLHJAM      = NO
 
-# If the GENERATE_HTMLHBEER tag is set to YES, the CHM_FILE tag can 
+# If the GENERATE_HTMLHJAM tag is set to YES, the CHM_FILE tag can 
 # be used to specify the file name of the resulting .chm file. You 
 # can add a path in front of the file if the result should not be 
 # written to the html output directory.
 
 CHM_FILE               = 
 
-# If the GENERATE_HTMLHBEER tag is set to YES, the HHC_LOCATION tag can 
+# If the GENERATE_HTMLHJAM tag is set to YES, the HHC_LOCATION tag can 
 # be used to specify the location (absolute path including file name) of 
 # the HTML help compiler (hhc.exe). If non-empty doxygen will try to run 
 # the HTML help compiler on the generated index.hhp.
 
 HHC_LOCATION           = 
 
-# If the GENERATE_HTMLHBEER tag is set to YES, the GENERATE_CHI flag 
+# If the GENERATE_HTMLHJAM tag is set to YES, the GENERATE_CHI flag 
 # controls if a separate .chi index file is generated (YES) or that 
 # it should be included in the master .chm file (NO).
 
 GENERATE_CHI           = NO
 
-# If the GENERATE_HTMLHBEER tag is set to YES, the CHM_INDEX_ENCODING 
+# If the GENERATE_HTMLHJAM tag is set to YES, the CHM_INDEX_ENCODING 
 # is used to encode HtmlHelp index (hhk), content (hhc) and project file 
 # content.
 
 CHM_INDEX_ENCODING     = 
 
-# If the GENERATE_HTMLHBEER tag is set to YES, the BINARY_TOC flag 
+# If the GENERATE_HTMLHJAM tag is set to YES, the BINARY_TOC flag 
 # controls whether a binary table of contents is generated (YES) or a 
 # normal table of contents (NO) in the .chm file.
 
@@ -1081,7 +1081,7 @@ QHP_SECT_FILTER_ATTRS  =
 
 QHG_LOCATION           = 
 
-# If the GENERATE_ECLIPSEHBEER tag is set to YES, additional index files  
+# If the GENERATE_ECLIPSEHJAM tag is set to YES, additional index files  
 # will be generated, which together with the HTML files, form an Eclipse help 
 # plugin. To install this plugin and make it available under the help contents 
 # menu in Eclipse, the contents of the directory containing the HTML and XML 
@@ -1090,7 +1090,7 @@ QHG_LOCATION           =
 # the ECLIPSE_DOC_ID value. After copying Eclipse needs to be restarted before 
 # the help appears.
 
-GENERATE_ECLIPSEHBEER   = NO
+GENERATE_ECLIPSEHJAM   = NO
 
 # A unique identifier for the eclipse help plugin. When installing the plugin 
 # the directory name containing the HTML and XML files should also have 
@@ -1158,25 +1158,25 @@ FORMULA_TRANSPARENT    = YES
 # rendering instead of using prerendered bitmaps. Use this if you do not 
 # have LaTeX installed or if you want to formulas look prettier in the HTML 
 # output. When enabled you also need to install MathJax separately and 
-# configure the path to it using the MATHJAX_RBEERATH option.
+# configure the path to it using the MATHJAX_RJAMATH option.
 
 USE_MATHJAX            = NO
 
 # When MathJax is enabled you need to specify the location relative to the 
-# HTML output directory using the MATHJAX_RBEERATH option. The destination 
+# HTML output directory using the MATHJAX_RJAMATH option. The destination 
 # directory should contain the MathJax.js script. For instance, if the mathjax 
 # directory is located at the same level as the HTML output directory, then 
-# MATHJAX_RBEERATH should be ../mathjax. The default value points to the 
+# MATHJAX_RJAMATH should be ../mathjax. The default value points to the 
 # mathjax.org site, so you can quickly see the result without installing 
 # MathJax, but it is strongly recommended to install a local copy of MathJax 
 # before deployment.
 
-MATHJAX_RBEERATH        = http://www.mathjax.org/mathjax
+MATHJAX_RJAMATH        = http://www.mathjax.org/mathjax
 
 # When the SEARCHENGINE tag is enabled doxygen will generate a search box 
 # for the HTML output. The underlying search engine uses javascript 
 # and DHTML and should work on any modern browser. Note that when using 
-# HTML help (GENERATE_HTMLHBEER), Qt help (GENERATE_QHP), or docsets 
+# HTML help (GENERATE_HTMLHJAM), Qt help (GENERATE_QHP), or docsets 
 # (GENERATE_DOCSET) there is already a search function so this one should 
 # typically be disabled. For large projects the javascript based search engine 
 # can be slow, then enabling SERVER_BASED_SEARCH may provide a better solution.

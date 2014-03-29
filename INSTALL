@@ -1,9 +1,9 @@
-Building BeerCoin
+Building JamieCoin
 
-See doc/readme-qt.rst for instructions on building BeerCoin-QT,
+See doc/readme-qt.rst for instructions on building JamieCoin-QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of BeerCoin.
+implementation of JamieCoin.
 
-See doc/build-*.txt for instructions on building BeerCoind,
+See doc/build-*.txt for instructions on building JamieCoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of BeerCoin.
+implementation of JamieCoin.

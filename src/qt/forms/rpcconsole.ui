@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>BeerCoin - Debug window</string>
+   <string>JamieCoin - Debug window</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -322,7 +322,7 @@
        <item row="15" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the BeerCoin debug logfile from the current data directory. This can take a few seconds for large logfiles.</string>
+          <string>Open the JamieCoin debug logfile from the current data directory. This can take a few seconds for large logfiles.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -348,7 +348,7 @@
        <item row="17" column="0">
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="toolTip">
-          <string>Show the BeerCoin-Qt help message to get a list with possible BeerCoin command-line options.</string>
+          <string>Show the JamieCoin-Qt help message to get a list with possible JamieCoin command-line options.</string>
          </property>
          <property name="text">
           <string>&amp;Show</string>

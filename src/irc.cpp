@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 BeerCoin Developers
+// Copyright (c) 2013 JamieCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -296,14 +296,14 @@ void ThreadIRCSeed2(void* parg)
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #beercoinTEST3\r");
-            Send(hSocket, "WHO #beercoinTEST3\r");
+            Send(hSocket, "JOIN #JamieCoinTEST3\r");
+            Send(hSocket, "WHO #JamieCoinTEST3\r");
         } else {
-            // randomly join #beercoin00-#beercoin99
+            // randomly join #JamieCoin00-#JamieCoin99
             int channel_number = GetRandInt(100);
-            channel_number = 0; // BeerCoin: for now, just use one channel
-            Send(hSocket, strprintf("JOIN #beercoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #beercoin%02d\r", channel_number).c_str());
+            channel_number = 0; // JamieCoin: for now, just use one channel
+            Send(hSocket, strprintf("JOIN #JamieCoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #JamieCoin%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();

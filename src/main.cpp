@@ -5,7 +5,7 @@
 // Copyright (c) 2011-2012 Litecoin Developers
 // Copyright (c) 2013 Luckycoin Developers
 // Copyright (c) 2013 Florincoin Developers
-// Copyright (c) 2014 BeerCoin Developer
+// Copyright (c) 2014 JamieCoin Developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -38,7 +38,7 @@ unsigned int nTransactionsUpdated = 0;
 map<uint256, CBlockIndex*> mapBlockIndex;
 
 uint256 hashGenesisBlock("0x1fa5fbc2bb19fe4b2bde0952d379ba49656eb87a1b9e4eddc00001e7166760d8");
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // BeerCoin: starting difficulty is 1 / 2^12
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // JamieCoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 CBigNum bnBestChainWork = 0;
@@ -58,7 +58,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "BeerCoin Signed Message:\n";
+const string strMessageMagic = "JamieCoin Signed Message:\n";
 
 double dHashesPerSec;
 int64 nHPSTimerStart;
@@ -849,12 +849,12 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
-    int64 nSubsidy = 50 * COIN;
+    int64 nSubsidy = 2500 * COIN;
 
 	if(nHeight == 1)
 	{
                 // 5% Premine
-		nSubsidy = 25000000 * COIN;
+		nSubsidy = 1250000000 * COIN;
 		return nSubsidy + nFees;
 	} 
 
@@ -888,9 +888,9 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 
 
 
-static const int64 nTargetTimespan = 20 * 60;						// BeerCoin: every 20 minutes
-static const int64 nTargetSpacing = 20;								// BeerCoin: 20 sec
-static const int64 nInterval = nTargetTimespan / nTargetSpacing;	// 20 blocks
+static const int64 nTargetTimespan = 2 * 60;						// JamieCoin: diff change every 2 minutes
+static const int64 nTargetSpacing = 30;								// JamieCoin: 30 sec blocks
+static const int64 nInterval = nTargetTimespan / nTargetSpacing;	// 4 blocks
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -948,7 +948,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         return pindexLast->nBits;
     }
 
-    // BeerCoin: This fixes an issue where a 51% attack can change difficulty at will.
+    // JamieCoin: This fixes an issue where a 51% attack can change difficulty at will.
     // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
     int blockstogoback = nInterval-1;
     if ((pindexLast->nHeight+1) != nInterval)
@@ -1221,7 +1221,7 @@ bool CTransaction::ConnectInputs(MapPrevTx inputs,
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal beercoin miner
+    // fMiner is true when called from the internal JamieCoin miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -1970,7 +1970,7 @@ bool CheckDiskSpace(uint64 nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "BeerCoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "JamieCoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }
@@ -2047,7 +2047,7 @@ bool LoadBlockIndex(bool fAllowNew)
             return false;
 
         // Genesis block
-        const char* pszTimestamp = "20140125-CCP is launcing BeerCoin for all Beer Lovers ;)";
+        const char* pszTimestamp = "29/3/2014 16:58:01 is launching JamieCoin for all Jamie Lovers ;)";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2059,15 +2059,15 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-	// 01/25/2014 01:000:000
-        block.nTime    = 1390608000;
+	// 29/3/2014 16:58:01
+        block.nTime    = 1396112281;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 2343314847;
 
 		if (fTestNet)
         {
-	// 01/25/2014 01:000:000
-            block.nTime    = 1390608000;
+	// 29/3/2014 16:58:01
+            block.nTime    = 1396112281;
             block.nNonce   = 2343314847;
         }
 
@@ -3507,7 +3507,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
                 continue;
 
             // Transaction fee required depends on block size
-            // BeerCoind: Reduce the exempted free transactions to 500 bytes (from Bitcoin's 3000 bytes)
+            // JamieCoind: Reduce the exempted free transactions to 500 bytes (from Bitcoin's 3000 bytes)
             bool fAllowFree = (nBlockSize + nTxSize < 1500 || CTransaction::AllowFree(dPriority));
             int64 nMinFee = tx.GetMinFee(nBlockSize, fAllowFree, GMF_BLOCK);
 

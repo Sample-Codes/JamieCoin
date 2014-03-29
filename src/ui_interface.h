@@ -53,7 +53,7 @@ public:
         FORWARD               = 0x00001000,
         BACKWARD              = 0x00002000,
         RESET                 = 0x00004000,
-        HBEER                  = 0x00008000,
+        HJAM                  = 0x00008000,
         MORE                  = 0x00010000,
         SETUP                 = 0x00020000,
         // Force blocking, modal message box dialog (not just OS notification)
