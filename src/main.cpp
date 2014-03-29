@@ -2074,7 +2074,7 @@ bool LoadBlockIndex(bool fAllowNew)
         //// debug print
         printf("block.GetHash() = %s\n", block.GetHash().ToString().c_str());
         printf("block.hashMerkleRoot = %s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0xc67c97e90fb0c07db4f9b32671ed6f1adad37ec1bf95aa63d0ec61527ddf9acd"));
+        assert(block.hashMerkleRoot == uint256("0x20a1963b16310fe461e14af34d1353b370e80fde5a64458bf2bda11337f2e192"));
 
         // If genesis block hash does not match, then generate new genesis hash.
         if (false && block.GetHash() != hashGenesisBlock)
