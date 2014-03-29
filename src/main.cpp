@@ -2027,7 +2027,7 @@ bool LoadBlockIndex(bool fAllowNew)
         pchMessageStart[1] = 0xc0;
         pchMessageStart[2] = 0xb6;
         pchMessageStart[3] = 0xf1;
-        hashGenesisBlock = uint256("0xxxxGENESISxxx");
+        hashGenesisBlock = uint256("0x548aa9f47910b3704f4114ce5b3ab57a7f314bda5489a3cf69c2818a7966145a");
     }
 
     //
@@ -2091,7 +2091,8 @@ bool LoadBlockIndex(bool fAllowNew)
                 scrypt_1024_1_1_256_sp(BEGIN(block.nVersion), BEGIN(thash), scratchpad);
                 if (thash <= hashTarget)
                     break;
-                if ((block.nNonce & 0xFFF) == 0)
+                if ((
+ & 0xFFF) == 0)
                 {
                     printf("nonce %08X: hash = %s (target = %s)\n", block.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
                 }
